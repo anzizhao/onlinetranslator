@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include
+END
+ParserSax.tcc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/ParserSax.tcc
+END
+ParserDom.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/ParserDom.h
+END
+Extensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/Extensions.h
+END
+Uri.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/Uri.h
+END
+semantic.cache
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/semantic.cache
+END
+tree.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/tree.h
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/utils.h
+END
+CharsetConverter.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/CharsetConverter.h
+END
+ci_string.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/ci_string.h
+END
+tld.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/tld.h
+END
+Node.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/Node.h
+END
+debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/debug.h
+END
+wincstring.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/wincstring.h
+END
+ParserSax.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/include/ParserSax.h
+END

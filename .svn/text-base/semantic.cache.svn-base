@@ -1,0 +1,23 @@
+;; Object translate/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "translate/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags '(("CC" variable (:default-value ("g++")) nil [1 11]) ("CFLAGS" variable (:default-value ("-g" "-W")) nil [11 28]) ("SUBDIR" variable (:default-value ("html" "http" "manage")) nil [30 59]) ("SOURCE" variable (:default-value ("$(foreach f, ${SUBDIR}, $(shell ls  ${f}/*.cpp ) )")) nil [558 619]) ("OBJ" variable (:default-value ("${SOURCE:%.cpp=%.o}")) nil [839 865]) ("SHARE_OBJ" variable (:default-value ("${SOURCE:%.cpp=%.share.o}")) nil [865 903]) ("LIB" variable (:default-value ("libtranslate.so")) nil [903 925]) ("all" function (:arguments ("debug")) nil [933 949]) (".PHONY" function (:arguments ("all" "test" "debug" "install" "uninstall" "clean" "cleanshareobj" "cleanobj" "lib" "SHARE")) nil [949 1033]) ("test" function nil nil [1033 1058]) ("debug" function (:arguments ("CFLAGS" "+=" "-D_debug")) nil [1089 1123]) ("debug" function (:arguments ("baidu")) nil [1118 1133]) ("${LIB}" function (:arguments ("${SHARE_OBJ}")) nil [1431 1489]) ("baidu" function (:arguments ("${SOURCE}" "${OBJ}" "baidu.cpp")) nil [1493 1603]) ("lib" function (:arguments ("${LIB}")) nil [1604 1617]) ("install" function (:arguments ("${LIB}")) nil [1618 1679]) ("uninstall" function nil nil [1681 1802]) ("clean" function (:arguments ("cleanobj" "cleanshareobj")) nil [1804 1859]) ("cleanshareobj" function nil nil [1860 1897]) ("cleanobj" function nil nil [1897 1922]) ("html/%.o" function (:arguments ("html/%.cpp" "${shell ls html/*.cpp}")) nil [1935 2014]) ("http/%.o" function (:arguments ("http/%.cpp" "${shell ls http/*.cpp}")) nil [2014 2093]) ("manage/%.o" function (:arguments ("manage/%.cpp" "${shell ls manage/*.cpp}")) nil [2093 2178]) ("html/%.share.o" function (:arguments ("html/%.cpp" "${shell ls html/*.cpp}")) nil [2196 2281]) ("http/%.share.o" function (:arguments ("http/%.cpp" "${shell ls http/*.cpp}")) nil [2281 2381]) ("manage/%.share.o" function (:arguments ("manage/%.cpp" "${shell ls manage/*.cpp}")) nil [2365 2455]))
+    :file "Makefile"
+    :pointmax 2455
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "baidu.cpp"
+    :major-mode 'c++-mode
+    :tags '(("manage/baidutranslate.hpp" include nil nil [1 37]) ("iostream" include (:system-flag t) nil [38 57]) ("main" function (:arguments (("argc" variable (:type "int") (reparse-symbol arg-sub-list) [92 101]) ("argv" variable (:pointer 1 :dereference 1 :type "char") (reparse-symbol arg-sub-list) [102 116])) :type "int") nil [82 321]))
+    :file "baidu.cpp"
+    :pointmax 322
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre4"
+  :semanticdb-version "2.0pre4"
+  )

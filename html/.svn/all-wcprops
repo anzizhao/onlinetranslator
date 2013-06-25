@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/html
+END
+baiduparser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/9/trunk/html/baiduparser.cpp
+END
+google.json
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/google.json
+END
+json.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/json.txt
+END
+baiduparser.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/9/trunk/html/baiduparser.hpp
+END
+baiduEngine.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/baiduEngine.cpp
+END
+json_array_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/json_array_node.cpp
+END
+testjson.cc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/testjson.cc
+END
+json_base_node.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/json_base_node.hpp
+END
+baiduEngine.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/baiduEngine.hpp
+END
+json_array_node.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/json_array_node.hpp
+END
+semantic.cache
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/semantic.cache
+END
+jsonparser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/jsonparser.cpp
+END
+testbaidu.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/testbaidu.cc
+END
+googleparser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/html/googleparser.cpp
+END
+json_html.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/json_html.txt
+END
+basictranslateEngine.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/basictranslateEngine.hpp
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/readme.txt
+END
+jsonparser.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/jsonparser.hpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/Makefile
+END
+googleparser.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/html/googleparser.hpp
+END
+pageparser.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/html/pageparser.hpp
+END
+test
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/html/test
+END

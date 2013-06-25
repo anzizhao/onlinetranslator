@@ -1,0 +1,32 @@
+firstpart :GET
+firstpart :HOST
+URL :http://translate.google.com.hk/translate_a/t?client=t&text=happy&hl=zh-CN&sl=en&tl=zh-CN&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=0&tsel=0&sc=1
+HTTP/1.1 200 OK
+Pragma: no-cache
+Date: Wed, 19 Dec 2012 05:43:06 GMT
+Expires: Wed, 19 Dec 2012 05:43:06 GMT
+Cache-Control: private, max-age=600
+Content-Type: text/javascript; charset=UTF-8
+Content-Language: zh-CN
+Set-Cookie: PREF=ID=c7940e48af4de58c:NW=1:TM=1355895786:LM=1355895786:S=jFJHNBQ_fkFbDY2i; expires=Fri, 19-Dec-2014 05:43:06 GMT; path=/; domain=.google.com.hk
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment
+Server: HTTP server (unknown)
+X-XSS-Protection: 1; mode=block
+Connection: close
+
+[[["快乐","happy","Kuàilè",""]],[["形容词",["高兴","快乐","幸福","愉快","乐","欢乐","美好","美满","喜","快活","痛快","欣喜","喜悦","欢","快","悦","甜蜜","欣","怡","陶陶","畅","诉","有福气","忻","陶","邴","哿","怿","恹","逌","咍","姁"],[["高兴",["happy","glad"],,0.12913783],["快乐",["happy","joyful","cheerful"],,0.11758133],["幸福",["happy","blessed"],,0.077111721],["愉快",["pleasant","happy","delightful","cheerful","pleasing","delighted"],,0.031646587],["乐",["happy","glad","cheerful","amused"],,0.00995804],["欢乐",["happy","joyous"],,0.0070613078],["美好",["fine","happy","glorious"],,0.0044884402],["美满",["happy"],,0.0042164996],["喜",["happy","pleased","delighted"],,0.0031334364],["快活",["happy","merry","cheerful"],,0.002943591],["痛快",["happy","straightforward","jolly","joyful","forthright","simple and direct"],,0.0025977099],["欣喜",["happy","joyful"],,0.0019917334],["喜悦",["happy","joyful","joyous"],,0.0011708796],["欢",["happy","joyous","pleased"],,0.00060744432],["快",["fast","quick","rapid","swift","sharp","happy"],,0.00042406449],["悦",["happy","pleased","delighted"],,0.00039837172],["甜蜜",["sweet","happy"],,0.00039837172],["欣",["glad","happy"],,0.00022698537],["怡",["happy","joyful","pleased"],,2.7536449e-05],["陶陶",["happy"],,1.6187843e-05],["畅",["smooth","free","fluent","unimpeded","joyful","happy"],,1.3007298e-05],["诉",["happy"],,1.1843279e-05],["有福气",["blessed","happy"],,1.1843279e-05],["忻",["happy","fortunate","lucky"],,1.0783428e-05],["陶",["happy","contented"],,1.0783428e-05],["邴",["happy"],,6.4390792e-06],["哿",["excellent","happy"],,6.3392504e-06],["怿",["pleased","delighted","happy","content","satisfied"],,6.2409695e-06],["恹",["contented","peaceful","relaxed","serene","peaceable","happy"],,4.0294726e-06],["逌",["distant","pleased","contented","blissful","faraway","happy"],,4.0294726e-06],["咍",["happy"],,4.0294726e-06],["姁",["jolly","cheery","cheerful","joyful","merry","happy"],,4.0294726e-06]]]],"en",,[["快乐",[5],0,0,1000,0,1,0]],[["happy",4,,,""],["happy",5,[["快乐",1000,0,0],["高兴",0,0,0],["幸福",0,0,0],["愉快",0,0,0],["美满",0,0,0]],[[0,5]],"happy"]],,,[["en"]],4]
+Port: 80
+Host: translate.google.com.hk
+Path: http://translate.google.com.hk/translate_a/t?client=t&text=happy&hl=zh-CN&sl=en&tl=zh-CN&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=0&tsel=0&sc=1
+Method_:0
+Body: 
+url: translate.google.com.hkhttp://translate.google.com.hk/translate_a/t?client=t&text=happy&hl=zh-CN&sl=en&tl=zh-CN&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=0&tsel=0&sc=1
+Head: GET http://translate.google.com.hk/translate_a/t?client=t&text=happy&hl=zh-CN&sl=en&tl=zh-CN&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=0&tsel=0&sc=1 HTTP/1.1
+Host: translate.google.com.hk
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+Connection: close
+Content-Type: text/javascript; charset=UTF-8
+Content-Length:0
+

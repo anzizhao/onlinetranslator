@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/http
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/readme.txt
+END
+google
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/google
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/Makefile
+END
+result
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/result
+END
+httpclient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/onlinetranslate/code-0/!svn/ver/10/trunk/http/httpclient.cpp
+END
+google.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/google.cc
+END
+sock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/sock.cpp
+END
+test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/test.cc
+END
+httpclient.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/httpclient.hpp
+END
+semantic.cache
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/semantic.cache
+END
+sock.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/onlinetranslate/code-0/!svn/ver/7/trunk/http/sock.h
+END
