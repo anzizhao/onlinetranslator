@@ -1,25 +1,11 @@
-post
-Cmd:
-POST /transcontent HTTP/1.1
-Host: fanyi.baidu.com
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
-Connection: close
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
-Content-Length:92
 
-ie=utf-8&source=txt&query=我没有女朋友，你能不能做我女朋友&from=auto&to=auto
-HTTP/1.1 200 OK
-Set-Cookie: BAIDUID=EA95DC86891D659766CAE4269C87E76F:FG=1; max-age=31536000; expires=Wed, 04-Dec-13 12:38:22 GMT; domain=.baidu.com; path=/; version=1
-P3P: CP=" OTI DSP COR IVA OUR IND COM "
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: close
-Date: Tue, 04 Dec 2012 12:38:22 GMT
-Server: BWS/1.0
-
-19b
 {"from":"zh", "to":"en", "domain":"1", "type":2, "status":0, "data":[{"dst":"I don't have a girlfriend, can you be my girlfriend", "src":"我没有女朋友，你能不能做我女朋友", "relation":[], "result":[[0, "I don't have a girlfriend", ["0|18"], [], ["0|18"]], [1, ",", ["18|3"], [], ["18|3"]], [2, "can you", ["21|12"], ["0| "], ["21|12"]], [3, "be my girlfriend", ["33|15"], ["0| "], ["33|15"]]]}]}
-0
 
 
+
+
+{"from":"en", "to":"zh", "type":1, "version":1, "status":0, "result":"{"src":"English", "voice":[{"en_phonic":"[ˈɪŋglɪʃ]"},{"us_phonic":"[ˈɪŋɡlɪʃ]"}], "content":[{"mean":[{"pre":"n.", "cont":{"英语":"0","英语语言":"0","英格兰人":"0","（英国）纯正英语":"0"}}, {"pre":"adj.", "cont":{"英格兰的":"0","英国的":"0","英语的":"0","用英语写的":"0"}}]}]}
+
+
+
+{"from":"en", "to":"zh", "type":1, "version":1, "status":0, "result":"{"src":"English", "voice":[{"en_phonic":"[ˈɪŋglɪʃ]"},{"us_phonic":"[ˈɪŋɡlɪʃ]"}], "content":[{"mean":[{"pre":"n.", "cont":{"英语":"0","英语语言":"0","英格兰人":"0","（英国）纯正英语":"0"}}, {"pre":"adj.", "cont":{"英格兰的":"0","英国的":"0","英语的":"0","用英语写的":"0"}}]}]}"}rn0rnrn"}}

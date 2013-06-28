@@ -1,8 +1,8 @@
 #ifndef BASIC_TRANSLATEENGINE
 #define BASIC_TRANSLATEENGINE
 
-#include "../include/ParserSax.h"
-#include "../include/Node.h"
+#include <ParserSax.h>
+#include <Node.h>
 #include <string>
 #include <cstdlib>
 #include <iostream>

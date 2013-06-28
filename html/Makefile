@@ -1,7 +1,8 @@
 CC=g++ 
 CFLAGS=-g -W 
-
-
+LIBDIRS := -L. -L../dep/htmlcxx/html/.libs -L../dep/libjson 
+LIBS   := -ltranslate  -lhtmlcxx -ljson  
+INCLUDES :=  -I../dep/htmlcxx/html/   -I../dep/libjson -I../include/ 
 SOURCE = ${wildcard *.cpp}
 
 OBJ =  ${SOURCE:%.cpp = *.o }
@@ -9,13 +10,13 @@ OBJ =  ${SOURCE:%.cpp = *.o }
 
 
 
-all:	test
+all:	baidujson
 .PHONY:	all clean 
 
 
 
-test:   ${SOURCE}  ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} testbaidu.cc  -o $@   -L ../lib -l htmlcxx
+baidujson:   ${SOURCE}  ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} testbaidu.cc  -o $@   ${INCLUDES} ${LIBDIRS} ${LIBS}
 
 
 testjson:   .OBJ

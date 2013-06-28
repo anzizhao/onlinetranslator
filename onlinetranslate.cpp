@@ -21,19 +21,19 @@ struct languagemap {
 
 static  char * const  short_option = "s:d:f:h";
 static const  option long_option[] = {
-     { "src-lanaguage", 0, NULL, 's'},
-     { "dst-lanaguage", 0, NULL, 'd'},
-     { "filename", 0, NULL, 'f'},
+     { "src-lanaguage", 1, NULL, 's'},
+     { "dst-lanaguage", 1, NULL, 'd'},
+     { "filename", 1, NULL, 'f'},
      {"help", 0, NULL, 'h'},
      { NULL, 0, NULL, 0}
 } ;
 
 static languagemap glan[] =
 {
-     { "Auto", baiduconf::Auto, googleconf::Auto },
-     { "English", baiduconf::English, googleconf::English },
-     { "Chinese", baiduconf::Chinese, googleconf::Chinese },
-     { "Japanese",  baiduconf::Japanese, googleconf::Japanese }
+     { "ao", baiduconf::Auto, googleconf::Auto },
+     { "en", baiduconf::English, googleconf::English },
+     { "zh", baiduconf::Chinese, googleconf::Chinese },
+     { "ja",  baiduconf::Japanese, googleconf::Japanese }
 };
      
 
@@ -55,8 +55,8 @@ int  whichLanguage ( const string lan )
 void helpManual ()
 {
      cout << " Usage: \n";
-     cout << " baidu -s [language code] -d [language code] -f filename " << endl;
-     cout << " language code can be the value of  Auto, English, Chinese,Japanese" << endl;
+     cout << " ot  -s [language code] -d [language code] -f filename " << endl;
+     cout << " language code can be the value of  ao, en, zh , ja" << endl;
      exit (1);
      
      

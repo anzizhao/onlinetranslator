@@ -4,6 +4,7 @@
 #include "googleparser.hpp"
 #include <fstream>
 #include <iostream>
+#include <string>
 using namespace std;
 
 
@@ -18,6 +19,7 @@ int main ( int argc , char *argv[] )
      while ( getline(infile, line))
           html += line;
      
+     html += "\r\n0\r\n\r\n";
      
   
 
@@ -45,15 +47,15 @@ int main ( int argc , char *argv[] )
 
      // //  cout << "Using the baiduparser class" << endl;
      
-     // baiduparser bparser;
-     // bparser.parser(html1);
-     // cout << bparser.getResult() << endl;
+     baiduparser bparser;
+     bparser.parser(html);
+     cout << bparser.getResult() << endl;
 
 
-     googleparser gparser;
+     // googleparser gparser;
 
-     gparser.parser(html);
-     cout << gparser.getResult() << endl;
+     // gparser.parser(html);
+     // cout << gparser.getResult() << endl;
      
      
      return 0;

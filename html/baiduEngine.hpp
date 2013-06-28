@@ -2,7 +2,7 @@
 #define BAIDUENGINEHPP
 
 #include "basictranslateEngine.hpp"
-#include "../include/Node.h"
+#include <Node.h>
 
 
 

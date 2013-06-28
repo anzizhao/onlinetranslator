@@ -1,9 +1,11 @@
-# Time-stamp: "2013-01-03 11:25:07 Thursday by anzizhao"
+# Time-stamp: "2013-06-27 17:48:37 Thursday by anzizhao"
 
+# compilation
 CC = g++ 
 CFLAGS := -g -W 
-
-
+LIBDIRS := -L. -Ldep/htmlcxx/html/.libs -Ldep/libjson 
+LIBS   := -ltranslate  -lhtmlcxx -ljson  
+INCLUDES :=  -Idep/htmlcxx/html/   -Idep/libjson -Iinclude/ 
 SUBDIR :=  html http manage 
 
 # INCLUDE = $(shell ls html/*.hpp   http/*.h http/*.hpp manage/*.hpp)
@@ -21,13 +23,11 @@ SOURCE =  $(foreach f, ${SUBDIR}, $(shell ls  ${f}/*.cpp ) )
 # OBJ =   `for srcfile in ${SOURCE}; do objfiles="$${objfiles} $${srcfile%%.*}.o"; done ; echo $${objfiles}`
 OBJ = ${SOURCE:%.cpp=%.o}
 SHARE_OBJ = ${SOURCE:%.cpp=%.share.o}
-LIB = libtranslate.so
 
-
-
-
-
-
+# program  setting 
+PROGRAM := ot 
+DLIB  := libtranslate.so
+SLIB  := libtranslate.a 
 
 
 all:	debug    
@@ -36,8 +36,8 @@ all:	debug
 
 
 
-debug:  CFLAGS += -D_debug 	
-debug:	onlinetranslate 
+debug:  CFLAGS += -D_DEBUG  	
+debug:	${PROGRAM} 
 
 
 
@@ -56,26 +56,22 @@ debug:	onlinetranslate
 
 
 
-
-
-
-
-${LIB}:	${SHARE_OBJ}
+${DLIB}:	${SHARE_OBJ}
 	${CC} -shared ${SHARE_OBJ} -o $@ 	
 
 
-onlinetranslate:	${LIB}   onlinetranslate.cpp 
-	${CC} ${CFLAGS}   onlinetranslate.cpp -o $@ -I include/  -L lib/ -lhtmlcxx  -l${LIB:lib%.so=%}
+${PROGRAM}:	${DLIB}   onlinetranslate.cpp 
+	${CC} ${CFLAGS}   onlinetranslate.cpp -o $@ ${INCLUDES} ${LIBDIRS} ${LIBS}
 
 
 onlinetranslate_a:	${SOURCE} ${OBJ}  onlinetranslate.cpp 
-	${CC} ${CFLAGS} ${OBJ}  onlinetranslate.cpp -o $@ -I include/  -L lib/ -lhtmlcxx 
+	${CC} ${CFLAGS} ${OBJ}  onlinetranslate.cpp -o $@ ${INCLUDES} ${LIBDIRS} ${LIBS}
 
 
 lib:	${LIB}
 
 
-install:	${LIB}
+install:	${DLIB}
 	cp ${LIB} /usr/local/lib/${LIB}
 	cp onlinetranslate /usr/local/bin/
 	ldconfig 
@@ -94,7 +90,7 @@ uninstall:
 
 
 clean:	cleanobj  cleanshareobj 
-	rm -f  onlinetranslate  ${LIB}
+	rm -f  ${PROGRAM}  ${LIB}
 
 
 cleanshareobj:	
@@ -121,21 +117,21 @@ test:
 
 # object 
 html/%.o:html/%.cpp ${shell ls html/*.cpp}
-	${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@    ${INCLUDES}
 
 http/%.o:http/%.cpp ${shell ls http/*.cpp}
-	${CC} ${CFLAGS} -c  $< -o $@
+	${CC} ${CFLAGS} -c  $< -o $@    ${INCLUDES}
 
 manage/%.o:manage/%.cpp ${shell ls manage/*.cpp}
-	${CC} ${CFLAGS} -c  $< -o $@
+	${CC} ${CFLAGS} -c  $< -o $@     ${INCLUDES}
 
 
 
 # share object 
 html/%.share.o:html/%.cpp ${shell ls html/*.cpp}
-	${CC} ${CFLAGS} -c -fPIC $< -o $@
+	${CC} ${CFLAGS} -c -fPIC $< -o $@    ${INCLUDES}
 
 http/%.share.o:http/%.cpp ${shell ls http/*.cpp}
-	${CC} ${CFLAGS} -c -fPIC $< -o $@
+	${CC} ${CFLAGS} -c -fPIC $< -o $@    ${INCLUDES}
 manage/%.share.o:manage/%.cpp ${shell ls manage/*.cpp}
-	${CC} ${CFLAGS} -c -fPIC $< -o $@
+	${CC} ${CFLAGS} -c -fPIC $< -o $@    ${INCLUDES}

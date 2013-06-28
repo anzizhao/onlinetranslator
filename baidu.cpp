@@ -125,18 +125,20 @@ int main (int argc, char *argv[] )
           while ( cin  >> line  )
                query += line + ' ' ;
      }
-     // for debug 
-     // cout << "query result\n" << query << endl;
+     // for debug
 
+#ifdef _DEBUG      
+      cout << "query result\n" << query << endl;
+#endif 
     
 
 
      
-     baidutranslate b;
-     // b.setLanguage(baiduconf::Auto, baiduconf::Auto);
-     b.setLanguage(baidusrc, baidudst);
-     b.translate(query);
-     cout << "baidu result:\n" << b.getResult() << endl << endl;
+     // baidutranslate b;
+     // // b.setLanguage(baiduconf::Auto, baiduconf::Auto);
+     // b.setLanguage(baidusrc, baidudst);
+     // b.translate(query);
+     // cout << "baidu result:\n" << b.getResult() << endl << endl;
      
      
      googletranslate g;

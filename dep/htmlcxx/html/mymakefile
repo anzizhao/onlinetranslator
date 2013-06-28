@@ -1,0 +1,18 @@
+C=g++ 
+CFLAGS=-g -W 
+CLINK=link
+
+
+mytest:    mytest.cpp
+	${C} ${CFLAGS}    mytest.cpp -o $@ -L .libs/ -lhtmlcxx
+
+
+
+oritest:	tests.cc
+	${C} ${CFLAGS}  tests.cc  -o $@   -L .libs/ -lhtmlcxx
+
+
+
+
+
+testbaidu:	testbaidu.cpp  

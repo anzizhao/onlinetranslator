@@ -1,0 +1,7 @@
+C=g++ 
+CFLAGS=-g -W 
+
+
+
+mytest:    mytest.cpp
+	${C} ${CFLAGS} mytest.cpp -o $@ -L ../   -lhtmlcxx

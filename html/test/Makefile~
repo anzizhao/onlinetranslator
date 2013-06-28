@@ -1,0 +1,6 @@
+CC = g++ 
+CFLAGS := -g -W 
+
+
+json_baidu_t: libjson_baidu.cpp
+	${CC} ${CFLAGS} libjson_baidu.cpp ../libjson.a -o $@ 
