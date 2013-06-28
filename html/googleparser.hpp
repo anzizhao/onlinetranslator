@@ -2,11 +2,12 @@
 #define GOOGLEPARSERHPP
 
 #include "pageparser.hpp"
+#include <libjson.h>
 
 class googleparser : public pageparser
 {
 private:
-     void _doparser(bool gmflag=true);
+   
      
 
 public:
@@ -18,26 +19,13 @@ public:
                to_parser_page_ = page;
                
           }
-     //  string getResult ();
-     
-     //      {
-     //           return result_;
-     //      }
-
-     // void setPage ( const string &page)
-     //      {
-     //           to_parser_page_ = page;
-     //      }
+   
 
      void parser ();
 
-     // void parser ( const string &page )
-     //      {
-     //           to_parser_page_ = page;
-     //           parser ();
-               
-     //      }
-     
+    
+private:
+     void  _parserJson( const JSONNode &  );
 
 
 };
@@ -45,6 +33,5 @@ public:
      
 
 
-
-
 #endif 
+

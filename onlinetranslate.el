@@ -15,11 +15,11 @@
 	 ;; (message "int prog\npoint: %d, mark:%d" (point) (mark))
 	  (if (> (point) (mark))
 	      (exchange-point-and-mark))
-	  (setq translate_region_text (buffer-substring (point) (mark))))
+	  (setq translate_region_text (buffer-substring (point) (mark)))))
    ;; (message "point: %d, mark:%d" (point) (mark)))
   (let* (
 	(command 
-	 (format "echo %s | onlinetranslate -s English -d Chinese" translate_region_text))
+	 (format "echo %s | ot -s en  -d zh" translate_region_text))
 	(result 
 	 (shell-command-to-string command )))
   ;;  (message "int prog\npoint: %d, mark:%d" (point) (mark))

@@ -1,4 +1,4 @@
-# Time-stamp: "2013-06-28 20:39:13 Friday by anzizhao"
+# Time-stamp: "2013-06-28 23:19:48 Friday by anzizhao"
 
 # compilation
 CC = g++ 
@@ -32,7 +32,7 @@ SLIB  := libtranslate.a
 
 all:	debug    
 
-.PHONY:  all test  debug  install uninstall clean cleanshareobj cleanobj lib SHARE
+.PHONY:  all test  debug  install uninstall clean cleanshareobj cleanobj lib SHARE emacs_plugin
 
 
 
@@ -72,18 +72,18 @@ onlinetranslate_a:	${SOURCE} ${OBJ}  onlinetranslate.cpp
 
 
 install:	${DLIB}
-	cp ${LIB} /usr/local/lib/${LIB}
-	cp onlinetranslate /usr/local/bin/
+	cp ${DLIB} /usr/local/lib/${DLIB}
+	cp ${PROGRAM} /usr/local/bin/
 	ldconfig 
 
 
 
 uninstall:
-	if [ -e /usr/local/lib/libtranslate.so ] ;\
-		then rm -f /usr/local/lib/libtranslate.so ;\
+	if [ -e /usr/local/lib/${DLIB} ] ;\
+		then rm -f /usr/local/lib/${DLIB} ;\
 	fi  
-	if [ -e /usr/local/bin/onlinetranslate ] ;\
-		then rm -f /usr/local/bin/onlinetranslate ;\
+	if [ -e /usr/local/bin/${PROGRAM} ] ;\
+		then rm -f /usr/local/bin/${PROGRAM} ;\
 	fi  
 	ldconfig 
 
@@ -105,6 +105,11 @@ install_home:	onlinetranslate
 uninstall_home:		~/bin/onlinetranslate
 	rm  -f 	~/bin/onlinetranslate
 
+
+
+emacs_plugin:    onlinetranslate.el
+	cp onlinetranslate.el  ~/.emacs.d/ 
+	${shell echo  ";;onlinetranslation\n(add-to-list 'load-path  \"~/.emacs.d\")\n(require 'onlinetranslate)\n" >> ~/.emacs}
 
 test:
 #	echo ${INCLUDE} 
@@ -135,3 +140,71 @@ http/%.share.o:http/%.cpp ${shell ls http/*.cpp}
 	${CC} ${CFLAGS} -c -fPIC $< -o $@    ${INCLUDES}
 manage/%.share.o:manage/%.cpp ${shell ls manage/*.cpp}
 	${CC} ${CFLAGS} -c -fPIC $< -o $@    ${INCLUDES}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

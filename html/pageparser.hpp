@@ -1,17 +1,18 @@
 #ifndef PAGEPARSERHPP
 #define PAGEPARSERHPP
 
-#include "jsonparser.hpp"
+
 #include <string>
 #include <cassert>
-
+using namespace std;
+ 
 
 class pageparser
 {
 protected:
      string result_;
      string to_parser_page_;
-     jsonparser jparser_;
+ 
 
 
 
