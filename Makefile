@@ -1,4 +1,4 @@
-# Time-stamp: "2013-06-27 17:48:37 Thursday by anzizhao"
+# Time-stamp: "2013-06-28 20:39:13 Friday by anzizhao"
 
 # compilation
 CC = g++ 
@@ -68,7 +68,7 @@ onlinetranslate_a:	${SOURCE} ${OBJ}  onlinetranslate.cpp
 	${CC} ${CFLAGS} ${OBJ}  onlinetranslate.cpp -o $@ ${INCLUDES} ${LIBDIRS} ${LIBS}
 
 
-lib:	${LIB}
+
 
 
 install:	${DLIB}
@@ -90,7 +90,7 @@ uninstall:
 
 
 clean:	cleanobj  cleanshareobj 
-	rm -f  ${PROGRAM}  ${LIB}
+	rm -f  ${PROGRAM}  ${DLIB} ${SLIB}
 
 
 cleanshareobj:	

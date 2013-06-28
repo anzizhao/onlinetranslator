@@ -4,7 +4,7 @@
 #include "baiduparser.hpp"
 
 // pre deal with the json file
-void delete_slash(string & jsonfile )
+void baiduparser::delete_slash(string & jsonfile )
 {
      string::size_type  pos;
       
@@ -19,19 +19,29 @@ void delete_slash(string & jsonfile )
           jsonfile.erase( pos, 1 );
           pos = jsonfile.find("\\");
      }
-     // libjson doesn't support string json node?
-     // delete the double quotation marks of result value .
-     // make it became json node , not string. 
-     pos = jsonfile.find( "result\"");
-     if ( pos != string::npos )
-     {
-          
-          pos = jsonfile.find("\"", pos +  string("result\"").size() );
-          jsonfile.erase(pos, 1);
-          pos = jsonfile.rfind( "\"" );
-          jsonfile.erase(pos, 1);
-     }
      
+
+     // there are two type of the  json file . so use the name "data" to identify
+     // them.
+     if ( jsonfile.find( "\"data\"") == string::npos )
+     {
+          // libjson doesn't support string json node ?
+          // delete the double quotation marks of result value .
+          // make it became json node , not string.
+          jtype_ = WORD;
+          pos = jsonfile.find( "result\"");
+          if ( pos != string::npos )
+          {
+          
+               pos = jsonfile.find("\"", pos +  string("result\"").size() );
+               jsonfile.erase(pos, 1);
+               pos = jsonfile.rfind( "\"" );
+               jsonfile.erase(pos, 1);
+          }
+     }
+     else
+          jtype_ = SENTENCE;
+      
 }
 
 void  baiduparser::parser ()
@@ -41,18 +51,23 @@ void  baiduparser::parser ()
      delete_slash ( to_parser_page_ );
       
      JSONNode node_tree = libjson::parse ( to_parser_page_ );
-     _parserJson( node_tree  );
+     if ( jtype_ == WORD )
+          _parserJsonW( node_tree  );
+     else 
+          _parserJsonS( node_tree );
       
 }
 
-void  baiduparser:: _parserJson ( const JSONNode & node_tree )
+void  baiduparser:: _parserJsonW ( const JSONNode & node_tree )
 {
      JSONNode::const_iterator node_iter = node_tree.begin(); 
      while ( node_iter != node_tree.end() )
      {
          
           string  node_name = node_iter->name ();
-           
+
+         
+          
           if  ( node_iter->name () == "result" )
           {
                result_.clear();
@@ -82,7 +97,7 @@ void  baiduparser:: _parserJson ( const JSONNode & node_tree )
 
           if ( node_iter->type() == JSON_ARRAY || node_iter->type() == JSON_NODE )
           {
-               _parserJson( *node_iter );
+               _parserJsonW( *node_iter );
                
           }
           
@@ -93,57 +108,40 @@ void  baiduparser:: _parserJson ( const JSONNode & node_tree )
 }
 
 
-
-// void  baiduparser::parser ()
-// {
-//      if ( to_parser_page_.empty() )
-//           return;
-//      // remove the uncorrleated part
-//      string::size_type startpos;
-//      string::size_type endpos;
-     
-//      startpos = to_parser_page_.find("{");
-//      to_parser_page_.erase(0, startpos);
-//      endpos = to_parser_page_.find("\"relation\":");
-//      if ( endpos != string::npos ) {
+void  baiduparser:: _parserJsonS ( const JSONNode & node_tree )
+{
+     JSONNode::const_iterator node_iter = node_tree.begin(); 
+     while ( node_iter != node_tree.end() )
+     {
+         
+          string  node_name = node_iter->name ();
+          if ( node_name == "data" )
+          {
+               JSONNode::const_iterator arr_first_elem = node_iter->begin();
+               JSONNode::const_iterator node_first_elem = arr_first_elem->begin();
+               while ( node_first_elem != arr_first_elem->end() )
+               {
+                    
+                    if ( node_first_elem->name() == "dst" )
+                    {
+                         result_ = node_first_elem->as_string();
+                         break;
+                    }
+                    ++ node_first_elem ;
+                     
+               }
+               break;
+                
+                              
+          }
           
-//           endpos = to_parser_page_.rfind(",", endpos );
-//           to_parser_page_.replace(endpos, to_parser_page_.length(), "}]}");
-//      }
-     
-//      // for debug 
-//      // cout << to_parser_page_ << endl;
-     
-     
-//      vector<string>  vec_result;
-     
+          node_iter ++;
+           
+     }
 
-//      jparser_.parserJson(to_parser_page_);
-// #     vec_result = jparser_.getValue(string("\"data\"{\"dst\""));
-//      vec_result = jparser_.getValue(string("\"result\"{\\\"content\\\""));
-
-//      //判断是否嵌入html
-//      if ( vec_result.empty()  )
-//      {
-
-          
-//           vec_result = jparser_.getValue(string("\"result\""));
-//           result_ = vec_result.front();
-//           delete_slash(result_);
-          
-//           hparser_.parse(result_);
-
-//           result_.clear();
-//           result_ = hparser_.getResult();
-          
-//      }
-//      else
-//           result_ = vec_result.front();
-     
-     
+}
 
 
-// }
 
 
 
