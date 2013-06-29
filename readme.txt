@@ -1,45 +1,56 @@
 
 
-	这是在Linux系统下开发的一个在线翻译英语库。它使用百度和谷歌在线翻译引擎，能英汉互译。调用接口简单，具体使用可以参考onlinetranslate.cpp文件。
-依赖：
-   1. 使用htmlcxx库来解释html页面
-   2. 使用libjson库解释json文件
-   在dep/目录包含htmlcxx和libjson的源码，htmlcxx的版本是0.7.3， libjson的版本是7.6
-   请先自行编译安装. 
 
-编译：
-	
 
-编译测试用例：
+	this sofeware is developed under the Linux system, which is used for translation . It use the baidu translation engine and the google , and now support english
+ and chinese translate each other. the library API is very  simple . In detail , you
+can refer to the file  named onlinetranslate.cpp.
 
-	运行测试：
-	1. ./ot  -h 
+dependence: 
+	    1. use htmlcxx library to parse html file 
+	    2. use libjson library to parse json file 
+	    in the dep directory, you will find these two sofeware source code. the
+	    version of the htmlcxx is 0.7.3, and the libjson is 7.6. you should 
+	    compile and install them first . 
+
+compilation:    
+		make 
+
+install :
+	      sudo  make install 
+		
+unistall:
+	      sudo make uninstall 
+
+useage:
+	after  installed  this sofeware into your system, you can use it in the 
+terminal.
+	1.  ot  -h ( show  help manual ) 
 	Usage: 
 	 ot -s [language code] -d [language code] -f filename 
 	 language code can be the value of  au, en, zh ,Ja
-	 
 	 au -- auto en -- english zh -- simple chinese ja -- japanese 
-	2 ./ot  -s en  -d  zh 
-	   输入英文单词， Contrl-D结束
 
-	3 echo 要翻译句子或单词 | ot -s 源语言 -d 目标语言 
-	
+	2. ot -s en -d zh ( english to chinese )
+	   ot -s zh -d en ( chinese to english )
+	   after knock the command, you  will be required to input words, and 
+	   finished with Contrl-D.  
+	3. use the pipe for input . 
+	   echo $sentence | ot -s en -d zh 
 
-安装与卸载：
-	sudo make install 
-	sudo make uninstall 
-
-
-emacs插件：
-	依赖： 需要emacs的auto-complete插件
-	安装命令：
-	make emacs_plugin 
-	   
-        重新启动emacs， 使用鼠标选择翻译内容，按f1键，即可得翻译结果。（emacs_plugin.png ）
+install emacs plugin:
+	now you can use it in emacs. 
+	At first, you should sure  your emacs has install auto-complete plugin.
+	and then , use command ' make emacs_plugin' to install the emacs plugin. 
+	after that, restart your emacs.  Now you can select area to translate ,
+	and press f1 key ( emacs_plugin.png ). 
+	note, now this plugin just support the translation of english to chinese.
 
 
-ok,now then ,just all for yourself, have a good time (:  
+
+there are many tests should be done . So welcome to have a try. and  feedback your 
+question and advise. you can contract me  with the email. My email is 
+anzizhaoit@126.com 
 
 
-如需要帮助可与我联系
-邮箱：anzizhaoit@126.com 
+Ok, just for yourself, and have a good time. 
